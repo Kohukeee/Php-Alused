@@ -7,13 +7,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Harjutus 01</h1>
+    <h1>Harjutus 01 - Muutujad</h1>
     <?php
         $nimi = "Tere";
         $synniaasta = 1231;
         $Tahtkuju = "Jäär";
-        
-        echo $nimi,$synniaasta,$tahtkuju;
+
+        echo $nimi,"<br>",$synniaasta,"<br>",$Tahtkuju;
+        echo "<br>";
+        echo $nimi,"<br>",$synniaasta,"<br>",$Tahtkuju;
+        echo "<br>";
+        echo '"It\'s my Life" - Dr. Alban';
     ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
