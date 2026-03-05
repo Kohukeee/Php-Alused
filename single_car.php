@@ -42,6 +42,9 @@
 
 <!-- Sisu -->
  <div class="container">
+
+    <a href="index.php" class="btn btn-outline-dark"> Tagasi </a>
+
     <div class="row">
            <?php
     $id = $_GET['id'];
