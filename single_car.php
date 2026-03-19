@@ -22,7 +22,7 @@
             <p>Aasta: <?php echo $rida["year"] ?></p>
             <p>Istmeid: <?php echo $rida["seats"] ?></p>
             <p>Käigukast: <?php echo $rida["transmission"] ?></p>
-            <p>Hind: <?php echo $rida["price"] ?>€/päev</p>
+            <p class="fs-5">Hind: <?php echo $rida["price"] ?>€/päev</p>
             <a href="#" class="btn btn-dark w-100">Rendi auto</a>
         </div>
         <div class="col">
