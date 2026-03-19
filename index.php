@@ -31,8 +31,9 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
         </li>
+      </ul>
       <form class="d-flex" role="seatch" method="get" action="index.php">
-        <input class="form-control me-2" type="search" placeholder="search" aria-label="Search" name="otsi"/>
+        <input class="form-control me-2" type="Search" placeholder="Search" aria-label="Search" name="otsi"/>
         <button class="btn btn-outline-success" type="submit">Otsi</button>
       </form>
     </div>
