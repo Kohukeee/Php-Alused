@@ -3,6 +3,8 @@
 
 <!-- Sisu -->
  <div class="container">
+  <h1>Adminni ala</h1>
+<a href="lisa.php" class="btn btn-success">+ Lisa auto</a>
  <div class="row row-cols-1 row-cols-md-4 g-4">
   <!-- üks auto -->
    <?php
@@ -25,6 +27,10 @@
       <th scope="col">Mark</th>
       <th scope="col">Model</th>
       <th scope="col">Price</th>
+      <th scope="col">Price</th>
+      <th scope="col">Price</th>
+      <th scope="col">Price</th>
+      <th scope="col">Price</th>
     </tr>
   </thead>
   <tbody>
@@ -33,10 +39,16 @@
     //var_dump($rida);                            //kuvan testvastuse
     ?>
     <tr>
-      <th scope="row"><?php echo $rida["id"] ?></th>
-      <td><?php echo $rida["mark"] ?></td>
-      <td><?php echo $rida["model"] ?></td>
-      <td><?php echo $rida["price"] ?></td>
+      <th scope="row"><?php echo $rida["id"]; ?></th>
+      <td><?php echo $rida["mark"]; ?></td>
+      <td><?php echo $rida["model"]; ?></td>
+      <td><?php echo $rida["price"]; ?></td>
+      <td><?php echo $rida["price"]; ?></td>
+      <td><?php echo $rida["price"]; ?></td>
+      <td><?php echo $rida["price"]; ?></td>
+      <td><?php echo $rida["price"]; ?></td>
+      <td><a href="kustuta.php?delid=<?= $rida["id"]; ?>" class="btn btn-danger">Kustuta</a></td>
+      <td><a href="muuda.php?delid=<?= $rida["id"]; ?>" class="btn btn-warning">Muuda</a></td>
     </tr>
     <?php } ?>
   </tbody>
