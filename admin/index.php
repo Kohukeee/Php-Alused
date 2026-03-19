@@ -15,38 +15,30 @@
     $paring .= " LIMIT 8";             //valmistan ette päringu stringina
     //var_dump($_GET["otsi"]);
     $valjund = mysqli_query($yhendus, $paring); //saadan päringu andmebaasi
-    while($rida = mysqli_fetch_assoc($valjund)){       //sikutan vastuse alla
-    //var_dump($rida);                            //kuvan testvastuse
+    
    ?>
 
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">id</th>
+      <th scope="col">Mark</th>
+      <th scope="col">Model</th>
+      <th scope="col">Price</th>
     </tr>
   </thead>
   <tbody>
+    <?php
+      while($rida = mysqli_fetch_assoc($valjund)){       //sikutan vastuse alla
+    //var_dump($rida);                            //kuvan testvastuse
+    ?>
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="row"><?php echo $rida["id"] ?></th>
+      <td><?php echo $rida["mark"] ?></td>
+      <td><?php echo $rida["model"] ?></td>
+      <td><?php echo $rida["price"] ?></td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>John</td>
-      <td>Doe</td>
-      <td>@social</td>
-    </tr>
+    <?php } ?>
   </tbody>
 </table>
 
@@ -64,9 +56,7 @@
       </div>
     </div>
   </div>
-  <?php } ?>
-  <!-- üks auto -->
-  </div> -->
+
 </div>
 
 <!-- Sisu -->
