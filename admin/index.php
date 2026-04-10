@@ -8,6 +8,13 @@
  <div class="row row-cols-1 row-cols-md-4 g-4">
   <!-- üks auto -->
    <?php
+
+  // sõnumi kuvamine
+  if(isset($_GET['msg'])){
+    echo '<div class="alert alert-success" role="alert">Andmed edukalt lisatud!</div>';
+    }
+  // sõnumi kuvamine
+  
     $paring = "SELECT * FROM cars";
     if(!empty($_GET["otsi"])) {
       $otsing = $_GET["otsi"];
@@ -26,11 +33,14 @@
       <th scope="col">id</th>
       <th scope="col">Mark</th>
       <th scope="col">Model</th>
-      <th scope="col">Price</th>
-      <th scope="col">Price</th>
-      <th scope="col">Price</th>
-      <th scope="col">Price</th>
-      <th scope="col">Price</th>
+      <th scope="col">Mootor</th>
+      <th scope="col">Kütus</th>
+      <th scope="col">Hind</th>
+      <th scope="col">Aasta</th>
+      <th scope="col">Käigukast</th>
+      <th scope="col">Istmeid</th>
+      <th scope="col">Kirjeldus</th>
+      <th scope="col">Olek</th>
     </tr>
   </thead>
   <tbody>
@@ -42,13 +52,16 @@
       <th scope="row"><?php echo $rida["id"]; ?></th>
       <td><?php echo $rida["mark"]; ?></td>
       <td><?php echo $rida["model"]; ?></td>
+      <td><?php echo $rida["engine"]; ?></td>
+      <td><?php echo $rida["fuel"]; ?></td>
       <td><?php echo $rida["price"]; ?></td>
-      <td><?php echo $rida["price"]; ?></td>
-      <td><?php echo $rida["price"]; ?></td>
-      <td><?php echo $rida["price"]; ?></td>
-      <td><?php echo $rida["price"]; ?></td>
+      <td><?php echo $rida["year"]; ?></td>
+      <td><?php echo $rida["transmission"]; ?></td>
+      <td><?php echo $rida["seats"]; ?></td>
+      <td><?php echo $rida["description"]; ?></td>
+      <td><?php echo $rida["status"]; ?></td>
       <td><a href="kustuta.php?delid=<?= $rida["id"]; ?>" class="btn btn-danger">Kustuta</a></td>
-      <td><a href="muuda.php?delid=<?= $rida["id"]; ?>" class="btn btn-warning">Muuda</a></td>
+      <td><a href="muuda.php?editid=<?= $rida["id"]; ?>" class="btn btn-warning">Muuda</a></td>
     </tr>
     <?php } ?>
   </tbody>
