@@ -47,11 +47,18 @@
         $seats = $_GET['seats'];
         $description = $_GET['description'];
         $status = $_GET['status'];
+
         $paring = "UPDATE cars SET mark = '".$mark."', model = 'Ram ".$model."', engine = '".$engine."', fuel = '".$fuel."', price = '".$price."', year = '".$year."', transmission = '".$transmission."', seats = '".$seats."', description = '".$description."', status = '".$status."' WHERE cars.id = ".$id."";
 
-        print_r($paring);
+        // print_r($paring);
 
-        // $valjund = mysqli_query($yhendus, $paring);
+        $valjund = mysqli_query($yhendus, $paring);
+        $tulemus = mysqli_affected_rows($yhendus);
+            if ($tulemus == 1) {
+                header("Location: index.php?msg=lisatud");
+            } else {
+                echo "Kirjet ei lisatud";
+            }
     }
 
     // UPDATE cars SET mark = 'Dodgea', model = 'Ram 2500a', engine = 'Electrica', fuel = 'diesela', price = '2661', year = '2010', transmission = 'poolautomaat', seats = '4', description = 'magna vestibulum aliquet ultrices erat tortor sollicitudinasd', status = 'vaba' WHERE cars.id = 14;
